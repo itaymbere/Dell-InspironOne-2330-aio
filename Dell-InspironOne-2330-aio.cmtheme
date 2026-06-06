@@ -4,5 +4,7 @@
 ~/.conky/Dell-InspironOne-2330-aio/Date_WeekDay
 ~/.conky/Dell-InspironOne-2330-aio/Date_WeekNumber
 ~/.conky/Dell-InspironOne-2330-aio/FullMonitor
+~/.conky/Dell-InspironOne-2330-aio/Network_enp0s25.txt
+~/.conky/Dell-InspironOne-2330-aio/Networks_wifi.txt
 ~/.conky/Dell-InspironOne-2330-aio/wallpaper.png
-wallpaper-scaling:scaled
+wallpaper-scaling:centered
