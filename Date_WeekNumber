@@ -40,7 +40,7 @@ conky.config = {
 	alignment = 'top_middle',
 	
 	gap_x = 100,
-	gap_y = 140,
+	gap_y = 100,
 	no_buffers = true,
 	
 	uppercase = false,
