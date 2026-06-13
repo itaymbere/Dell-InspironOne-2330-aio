@@ -41,7 +41,7 @@ conky.config = {
 	default_outline_color = 'green',
 	alignment = 'middle_right',
 	gap_x = 150,
-	gap_y = 50,
+	gap_y = -317,
 	no_buffers = true,
 	uppercase = false,
 	cpu_avg_samples = 2,
@@ -50,7 +50,7 @@ conky.config = {
 	use_spacer = 'no',
 
 
-	minimum_width = 400, minimum_height = 400,
+	minimum_width = 0, minimum_height = 0,
 };
 
 conky.text = [[${alignr}${offset 0}${fs_used_perc}% root - ${color #BEC8CB}${fs_bar 5,120 /}${color}

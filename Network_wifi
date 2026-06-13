@@ -39,7 +39,7 @@ conky.config = {
 	default_color = 'white',
 	default_shade_color = 'red',
 	default_outline_color = 'green',
-	alignment = 'bottom_right',
+	alignment = 'bottom_middle',
 	gap_x = 0,
 	gap_y = 0,
 	no_buffers = true,
@@ -50,7 +50,7 @@ conky.config = {
 	use_spacer = 'no',
 
 
-	minimum_width = 400, minimum_height = 400,
+	minimum_width = 0, minimum_height = 0,
 };
 
 conky.text = [[${font Ubuntu:pixelsize=12}${color FFA300}Wi-Fi: $color wlp2s0
