@@ -37,8 +37,8 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'middle_right',
-    gap_x = 250,
-    gap_y = -128,
+    gap_x = 340,
+    gap_y = -68,
     no_buffers = true,
     cpu_avg_samples = 2,
     net_avg_samples = 2,
@@ -50,5 +50,5 @@ conky.config = {
 
 conky.text = [[
 #leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
-${alignr}< $memperc% | $mem/$memmax ${color #BEC8CB}${membar 5,50}${color} > RAM
+${alignr}$memperc% | $mem/$memmax ${color #BEC8CB}${membar 5,50}${color}
 ]];

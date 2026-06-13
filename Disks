@@ -39,9 +39,9 @@ conky.config = {
 	default_color = 'white',
 	default_shade_color = 'red',
 	default_outline_color = 'green',
-	alignment = 'top_right',
-	gap_x = 0,
-	gap_y = 260,
+	alignment = 'middle_right',
+	gap_x = 150,
+	gap_y = 50,
 	no_buffers = true,
 	uppercase = false,
 	cpu_avg_samples = 2,
@@ -53,8 +53,8 @@ conky.config = {
 	minimum_width = 400, minimum_height = 400,
 };
 
-conky.text = [[${alignr}${offset 0}< ${fs_used_perc}% > Root < ${color #BEC8CB}${fs_bar 5,120 /}${color} >${offset 20}
-${alignr}${offset 0}< ${fs_used_perc /home}% > Home < ${color #BEC8CB}${fs_bar 5,120 /home}${color} >${offset 20}
-${alignr}${offset 0}<  ${swapperc}% > Swap < ${color #BEC8CB}${swapbar 5,120}${color} >${offset 20}
-${alignr}${offset 0}< ${fs_used_perc /tmp}% > Temp < ${color #BEC8CB}${fs_bar 5,120 /tmp}${color} >${offset 20}
+conky.text = [[${alignr}${offset 0}${fs_used_perc}% root - ${color #BEC8CB}${fs_bar 5,120 /}${color}
+${alignr}${offset 0}${fs_used_perc /home}% home - ${color #BEC8CB}${fs_bar 5,120 /home}${color}
+${alignr}${offset 0}${swapperc}% swap - ${color #BEC8CB}${swapbar 5,120}${color}
+${alignr}${offset 0}${fs_used_perc /tmp}% temp - ${color #BEC8CB}${fs_bar 5,120 /tmp}${color}
 ]];
