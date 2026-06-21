@@ -50,7 +50,7 @@ conky.config = {
 	use_spacer = 'no',
 
 
-	minimum_width = 400, minimum_height = 400,
+	minimum_width = 0, minimum_height = 0,
 };
 
 conky.text = [[
@@ -60,10 +60,10 @@ ${alignr}${exec lspci | grep VGA | sed 's/00:02.0 VGA compatible controller: //g
 ${alignr}${exec lspci | grep VGA | sed 's/00:02.0 VGA compatible controller: //g' | sed 's/ Corporation//g' | sed 's/ Integrated Graphics Controller (primary) (rev 0c)//g' | sed -n "2p" | awk -F': ' '{print $2}'} ${color FFA300}>$color GPU ${color FFA300}(dedicated)$color
 ${voffset 0}${offset 0}${font Ubuntu:pixelsize=12}${color FFA300}HD$color${offset 9}${fs_free /}/${fs_size /}${offset 9}${color FFA300}RAM$color${offset 9}$mem/$memmax${offset 9}${color FFA300}CPU$color${offset 9}${color FFA300}1 $color${cpu cpu0}%${offset 9}${color FFA300}2 $color${cpu cpu1}%${offset 9}${color FFA300}3 $color${cpu cpu2}%${offset 9}${color FFA300}4 $color${cpu cpu3}%
 
-${voffset 0}${offset 0}${font Ubuntu:pixelsize=12}${color FFA300}FANs $color
-${color FFA300}CPU fan1$color ${execi 2 sensors | awk '/Processor Fan/ {print $3}' | sed -n '1p'}$color${offset 9}${color FFA300}min $color(${execi 2 sensors | awk '/Processor Fan/ {print $7}' | sed -n '1p'}, ${color FFA300}max $color${execi 2 sensors | awk '/Processor Fan/ {print $11}' | sed -n "1p"}) ${color FFA300}rpms$color
-${color FFA300}CPU fan2$color ${execi 2 sensors | awk '/Processor Fan/ {print $3}' | sed -n '2p'} ${color FFA300}rpms$color${offset 9}${color FFA300}min $color(${execi 2 sensors | awk '/Processor Fan/ {print $7}' | sed -n '2p'}, ${color FFA300}max $color${execi 2 sensors | awk '/Processor Fan/ {print $11}' | sed -n "2p"}) ${color FFA300}rpms$color
-${offset 9}${color FFA300}ISA$color${offset 9}${color FFA300}fan1$color ${execi 2 sensors | awk '/fan1/ {print $2}'}${offset 9}${color FFA300}fan2 $color${execi 2 sensors | awk '/fan2/ {print $2}'}${offset 9}${color FFA300}3$color $color${execi 2 sensors | awk '/fan3/ {print $2}'} ${color FFA300}rpms$color
+${voffset 0}${offset 0}${font Ubuntu:pixelsize=12}${color FFA300}FANs $color(rpms)
+${color FFA300}CPU fan1$color ${execi 2 sensors | awk '/Processor Fan/ {print $3}' | sed -n '1p'}$color ${color FFA300}min $color(${execi 2 sensors | awk '/Processor Fan/ {print $7}' | sed -n '1p'}, ${color FFA300}max $color${execi 2 sensors | awk '/Processor Fan/ {print $11}' | sed -n "1p"})
+${color FFA300}CPU fan2$color ${execi 2 sensors | awk '/Processor Fan/ {print $3}' | sed -n '2p'} ${color FFA300}min $color(${execi 2 sensors | awk '/Processor Fan/ {print $7}' | sed -n '2p'}, ${color FFA300}max $color${execi 2 sensors | awk '/Processor Fan/ {print $11}' | sed -n "2p"})
+${offset 9}${color FFA300}ISA$color ${color FFA300}fan1$color ${execi 2 sensors | awk '/fan1/ {print $2}'}${offset 9}${color FFA300}fan2 $color${execi 2 sensors | awk '/fan2/ {print $2}'}${offset 9}${color FFA300}3$color $color${execi 2 sensors | awk '/fan3/ {print $2}'}
 ${voffset 0}${offset 0}${color FFA300}Temperatures:$color
 ${offset 9}${font Ubuntu:pixelsize=12}${offset 0}${color FFA300}Cores${offset 9}1 $color${execi 2 sensors | awk '/Core 0/ {print $3}'}${offset 9}${color FFA300}2 $color${execi 2 sensors | awk '/Core 1/ {print $3}'}${offset 9}${color FFA300}3 $color${execi 2 sensors | awk '/Core 2/ {print $3}'}${offset 9}${color FFA300}4 $color${execi 2 sensors | awk '/Core 3/ {print $3}'}${offset 9}${color FFA300}min $color(${execi 2 sensors | awk '/Core 3/ {print $6}'} ${color FFA300}max $color${execi 2 sensors | awk '/Core 3/ {print $9}'}
 ${offset 9}${color FFA300}Pkg$color${offset 9}${execi 2 sensors | awk '/Package id 0/ {print $4}'}${offset 9}${color FFA300}CPU1$color${offset 9}${execi 2 sensors | awk '/CPU/ {print $2}'}${offset 9}${color FFA300}2$color ${execi 2 sensors | awk '/temp2/ {print $2}' | sed -n '1p'}
