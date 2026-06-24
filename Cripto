@@ -26,12 +26,12 @@ conky.config = {
     default_shade_color = '#BEC8CB',
     default_outline_color = '#BEC8CB',
     alignment = 'middle_left',
-    gap_x = 120,
+    gap_x = 0,
     gap_y = 0,
     use_spacer = 'none',
     uppercase = true,
 };
 
 conky.text = [[
-${exec /home/rod/.conky/Kosteron/conky-altcoin-monitor/fetch.sh}
+${exec ~/.conky/Dell-InspironOne-2330-aio/scripts/cripto_fetch.sh}
 ]];

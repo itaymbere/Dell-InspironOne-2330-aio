@@ -39,9 +39,9 @@ conky.config = {
 	default_color = 'white',
 	default_shade_color = 'red',
 	default_outline_color = 'green',
-	alignment = 'bottom_middle',
+	alignment = 'middle_left',
 	gap_x = 0,
-	gap_y = 0,
+	gap_y = -350,
 	no_buffers = true,
 	uppercase = false,
 	cpu_avg_samples = 2,
@@ -50,12 +50,22 @@ conky.config = {
 	use_spacer = 'no',
 
 
-	minimum_width = 400, minimum_height = 400,
+	minimum_width = 500, minimum_height = 500,
 };
 
 conky.text = [[
-${execi 300 curl "https://wttr.in/Itajubá?format=1&lang=pt-br"}
-${execi 300 curl "https://wttr.in/Delfim%20Moreira?format=2&lang=pt-br"}
-${execi 300 curl "https://wttr.in/Campos%20do%20Jord%C3%A3o?format=3&lang=pt-br"}
+${execi 300 curl "https://wttr.in/Itajubá?format=4&lang=pt-br"}
+${execi 300 curl "https://wttr.in/Delfim%20Moreira?format=4&lang=pt-br"}
+${execi 300 curl "https://wttr.in/Campos%20do%20Jord%C3%A3o?format=4&lang=pt-br"}
 ${execi 300 curl "https://wttr.in/Ubatuba?format=4&lang=pt-br"}
 ]];
+
+
+
+
+
+
+
+
+
+
