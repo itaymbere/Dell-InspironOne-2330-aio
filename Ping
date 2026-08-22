@@ -1,0 +1,38 @@
+-- Simple heartbeat to monitor a server
+
+conky.config = {
+    background = false,
+    font = 'FuraCode Nerd Font:pixelsize=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 10,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_left',
+    gap_x = 50,
+    gap_y = 50,
+    use_spacer = 'none',
+};
+
+conky.text = [[
+< Pingbeat : ${exec if ! $( ping -c1 HOSTNAME &>/dev/null ) ; then echo "Server Offline - `date`" ; else echo "Server Online - `date`" ; fi } >
+< TamanduáTI : ${exec if ! $( ping -c1 server.tamanduati.com &>/dev/null ) ; then echo "TamanduáTI Offline - `date`" ; else echo "TamanduáTI Online - `date`" ; fi } >
+< HmaxTI : ${exec if ! $( ping -c1 router.hmaxti.com.br &>/dev/null ) ; then echo "HmaxTI Offline - `date`" ; else echo "HmaxTI Online - `date`" ; fi } >
+]];

@@ -1,0 +1,44 @@
+-- Simple and aesthetic RSS reader
+
+conky.config = {
+    background = true,
+    font = 'FuraCode Nerd Font:pixelsize=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 60,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_middle',
+    gap_x = 10,
+    gap_y = 40,
+    use_spacer = 'none',
+    uppercase = false,
+};
+
+conky.text = [[
+─ > Notícias ────────────────────────────────────────────────────────────
+
+${rss https://g1.globo.com/dynamo/mg/sul-de-minas/rss2.xml 1 item_titles 5}
+${rss https://www.cnnbrasil.com.br/rss 1 item_titles 5}
+${rss https://www.jpost.com//rss/rssfeedsfrontpage.aspx 1 item_titles 5}
+${rss https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml 1 item_titles 5}
+─────────────────────────────────────────────────────────────────────────
+]];
+
